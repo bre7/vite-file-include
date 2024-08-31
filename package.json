@@ -1,0 +1,25 @@
+{
+  "name": "vite-file-include",
+  "version": "1.0.2",
+  "description": "A Vite plugin for file inclusion, loops, and conditionals in HTML files",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vite",
+    "plugin",
+    "file-include",
+    "html"
+  ],
+  "author": "Ahmed Abdulgid",
+  "license": "MIT",
+  "peerDependencies": {
+    "vite": "^4.0.0"
+  },
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "path": "^0.12.7"
+  }
+}
