@@ -206,10 +206,6 @@ Below is an example of how you might structure your HTML files using the plugin'
 
 If there is an error parsing JSON data or including a file, the plugin will log a detailed error message to the console. This helps in debugging while ensuring that your build process continues without interruption.
 
-## Caching
-
-The plugin implements a caching mechanism to improve performance, especially for larger projects with many includes. Cached content is automatically invalidated after the specified `cacheTimeout`.
-
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for more details.
