@@ -30,7 +30,7 @@ function fileIncludePlugin(options = {}) {
       if (id.endsWith(".html")) {
         return processIncludes(
           code,
-          path.dirname(id),
+          baseDir,
           includePattern,
           loopPattern,
           ifPattern,
