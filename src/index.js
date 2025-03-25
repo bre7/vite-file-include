@@ -30,7 +30,7 @@ function fileIncludePlugin(options = {}) {
       if (id.endsWith(".html")) {
         return processIncludes(
           code,
-          path.dirname(id),
+          baseDir,
           includePattern,
           loopPattern,
           ifPattern,
@@ -93,7 +93,7 @@ function processIncludesWithPattern(
   customFunctions
 ) {
   const regex = new RegExp(
-    `${includePattern}\\(\\s*['"](.+?)['"]\\s*,?\\s*({[\\s\\S]*?})?\\s*\\);`,
+    `${includePattern}\\(\\s*['"](.+?)['"]\\s*,?\\s*({[\\s\\S]*?})?\\s*\\);?`,
     "g"
   );
 
@@ -134,7 +134,7 @@ function processIncludesWithPattern(
 
 function processLoops(content, dir, loopPattern, context, customFunctions) {
   const regex = new RegExp(
-    `${loopPattern}\\(\\s*['"](.+?)['"]\\s*,\\s*(\\[[\\s\\S]*?\\]|['"](.+?)['"])\\s*\\);`,
+    `${loopPattern}\\(\\s*['"](.+?)['"]\\s*,\\s*(\\[[\\s\\S]*?\\]|['"](.+?)['"])\\s*\\);?`,
     "g"
   );
 
@@ -183,7 +183,7 @@ function processConditionals(
   customFunctions
 ) {
   const regex = new RegExp(
-    `${ifPattern}\\s*\\(([^)]+)\\)\\s*{([\\s\\S]*?)};\\s*`,
+    `${ifPattern}\\s*\\(([^)]+)\\)\\s*{([\\s\\S]*?)};?\\s*`,
     "g"
   );
 
